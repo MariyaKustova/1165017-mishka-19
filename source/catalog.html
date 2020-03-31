@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Мишка</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="page-header">
+      <img
+        class="page-header__logo-image"
+        src="../source/img/general/mishka-logo-mobile-svg-copy.svg"
+        width="86"
+        height="35"
+        alt="Логотип интернет-магазина Мишка"
+      />
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="./catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="./order.html">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item site-list__item--search">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="site-list__item site-list__item--busket">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title">Каталог товаров</h1>
+      <section class="page-main__catalog catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <a class="catalog__description__link-image" href="#"
+              ><img
+                class="catalog__image-product"
+                src="#"
+                width="260"
+                height="195"
+                alt="Фотография Зайчика-попрыгайчика"
+            /></a>
+            <a class="catalog__description__link-text" href="#"
+              ><h2 class="catalog__title-product">Зайчик-попрыгайчик</h2></a
+            >
+            <p class="catalog__description">Рост 30 см, вес 200 г</p>
+            <div class="catalog__control-wrapper">
+              <p class="catalog__price">1 200 руб.</p>
+              <button class="catalog__button button" type="button">
+                Купить
+              </button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <a class="catalog__description__link-image" href="#"
+              ><img
+                class="catalog__image-product"
+                src="#"
+                width="260"
+                height="195"
+                alt="Фотография корзинки для белья"
+            /></a>
+            <a class="catalog__description__link-text" href="#"
+              ><h2 class="catalog__title-product">Корзинка для белья</h2></a
+            >
+            <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog__control-wrapper">
+              <p class="catalog__price">690 руб.</p>
+              <button class="catalog__button button" type="button">
+                Купить
+              </button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <a class="catalog__description__link-image" href="#"
+              ><img
+                class="catalog__image-product"
+                src="#"
+                width="260"
+                height="195"
+                alt="Фотография большой корзинки для игрушек"
+            /></a>
+            <a class="catalog__description__link-text" href="#"
+              ><h2 class="catalog__title-product">
+                Большая корзинка для игрушек
+              </h2></a
+            >
+            <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
+            <div class="catalog__control-wrapper">
+              <p class="catalog__price">1 500 руб.</p>
+              <button class="catalog__button button" type="button">
+                Купить
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__production-process production-process">
+        <h2 class="production-process__title production-process__title--camera">
+          Процесс производства
+        </h2>
+        <video
+          class="production-process__video"
+          width="260"
+          height="150"
+          src="#"
+        ></video>
+        <p class="production-process__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео
+          о том, как появляются наши товары.
+        </p>
+        <button class="production-process__button button" type="button">
+          Сделать заказ
+        </button>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social__link social__link--instagram" href="#"
+              >Инстаграм</a
+            >
+          </li>
+          <li class="social-item">
+            <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+          </li>
+          <li class="social-item">
+            <a class="social__link social__link--twitter" href="#">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a
+          class="copyright__link"
+          href="https://htmlacademy.ru/intensive/adaptive"
+        >
+          <img
+            src="./img/general/htmlacademy-svg.svg"
+            width="27"
+            height="34"
+            alt="Логотип HTMLacademy"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <section class="catalog-popup">
+      <h2 class="catalog-popup__title">Добавить в корзину</h2>
+      <p class="catalog-popup__text">Выберите размер:</p>
+      <ul class="catalog-popup__list">
+        <li class="catalog-popup__item">
+          <label class="catalog-popup__size">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="size"
+              value="small"
+            />
+            <span class="catalog-popup__size-value">S</span>
+          </label>
+        </li>
+        <li class="catalog-popup__item">
+          <label class="catalog-popup__size">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="size"
+              value="medium"
+            />
+            <span class="catalog-popup__size-value">M</span>
+          </label>
+        </li>
+        <li class="catalog-popup__item">
+          <label class="catalog-popup__size">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="size"
+              value="large"
+            />
+            <span class="catalog-popup__size-value">L</span>
+          </label>
+        </li>
+      </ul>
+      <button class="catalog-popup__button button" type="button">
+        Добавить
+      </button>
+    </section>
+  </body>
+</html>
