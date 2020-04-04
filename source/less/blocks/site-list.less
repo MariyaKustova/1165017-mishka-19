@@ -1,0 +1,26 @@
+.site-list {
+  .list-reset();
+  margin: 0 -30px;
+}
+
+.site-list__item {
+  position: relative;
+  padding: 25px 0 30px;
+}
+
+.site-list__item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: @base-color;
+  position: absolute;
+  bottom: 0;
+}
+
+.site-list__link {
+  .font (17px; 24px);
+  .link-reset (@color-black);
+  .display-block-link();
+  padding-left: 75px;
+}

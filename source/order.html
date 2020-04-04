@@ -7,31 +7,35 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
       rel="stylesheet"
     />
+    <link href="./css/normalize.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <img
-        class="page-header__logo-image"
-        src="../source/img/general/mishka-logo-mobile-svg-copy.svg"
-        width="86"
-        height="35"
-        alt="Логотип интернет-магазина Мишка"
-      />
+      <a class="page-header__logo" href="./index.html" aria-label="Ссылка на главную страницу">
+        <img
+          class="page-header__logo-image"
+          src="./img/general/mishka-logo-mobile-svg-copy.svg"
+          width="86"
+          height="35"
+          alt="Логотип интернет-магазина Мишка"
+        />
+      </a>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <button class="main-nav__toggle">Открыть меню</button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="./catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="./catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="./order.html">Вязание на заказ</a>
+              <a class="site-list__link" href="./order.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item site-list__item--search">
-              <a href="#">Поиск по сайту</a>
+              <a class="site-list__link" href="#">Поиск по сайту</a>
             </li>
             <li class="site-list__item site-list__item--busket">
-              <a href="#">Корзина: пока пуста</a>
+              <a class="site-list__link" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
         </div>

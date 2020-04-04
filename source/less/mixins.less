@@ -1,0 +1,42 @@
+// Параметры текста
+
+.font (@size; @line-height) {
+  font-size: @size;
+  line-height: @line-height;
+}
+
+.weight (@weight) {
+  font-weight: @weight;
+}
+
+.list-reset (){
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.indent (@margin; @padding) {
+  margin: @margin;
+  padding: @padding;
+}
+
+.link-reset (@color) {
+  text-decoration: none;
+  color: @color;
+}
+
+.display-block-link (){
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.size (@widht; @height) {
+  width: @widht;
+  height: @height;
+}
+
+.section-header () {
+  .font(25px; 30px);
+  color: @color-black;
+}
