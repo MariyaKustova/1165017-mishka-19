@@ -1,6 +1,10 @@
 .site-list {
   .list-reset();
   margin: 0 -30px;
+  width: 320px;
+  border-left: 1px solid @base-color;
+  border-right: 1px solid @base-color;
+  border-bottom: 1px solid @base-color;
 }
 
 .site-list__item {
@@ -8,7 +12,7 @@
   padding: 25px 0 30px;
 }
 
-.site-list__item::after {
+.site-list__item:not(:last-child)::after {
   content: "";
   display: block;
   width: 100%;

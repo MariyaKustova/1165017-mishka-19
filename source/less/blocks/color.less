@@ -1,0 +1,39 @@
+.color__header {
+  margin-bottom: 35px;
+}
+
+.color__list {
+  .list-reset ();
+}
+
+.color__item {
+  padding-left: 61px;
+  margin-bottom: 43px;
+  position: relative;
+}
+
+.checkbox-toggle {
+  display: inline-block;
+  vertical-align: top;
+  .size (36px; 36px);
+  border: 2px solid @color-greyish-brown;
+  position: absolute;
+  top: -10px;
+  left: -2px;
+}
+
+.color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
+  content: "";
+  display: block;
+  .size (8px; 20px);
+  border-right: 2px solid @color-greyish-brown;
+  border-bottom: 2px solid @color-greyish-brown;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 5px;
+  left: 12px;
+}
+
+.color__title {
+  .font (17px; 18px);
+}
