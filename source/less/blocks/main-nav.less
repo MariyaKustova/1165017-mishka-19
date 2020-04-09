@@ -1,0 +1,39 @@
+.main-nav__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__toggle {
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 37px;
+  right: -3px;
+}
+
+.main-nav__toggle::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: @color-black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-nav__toggle::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: @color-black;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
