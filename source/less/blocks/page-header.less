@@ -2,11 +2,75 @@
   position: relative;
 }
 
-.page-header__logo {
-  display: flex;
-  justify-content: center;
-  margin: 0 -30px;
-  min-height: 80px;
-  border-bottom: 1px solid @base-color;
+.page-header__wrapper {
+  margin: 0 auto;
 }
 
+.page-header__logo {
+  height: 79px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid @base-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__logo--tablet {
+  display: none;
+}
+
+.page-header__logo--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    border-bottom: 1px solid @base-color;
+  }
+
+  .page-header__wrapper {
+    padding: 0 49px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    height: 88px;
+    border: none;
+  }
+
+  .page-header__logo--mobile {
+    display: none;
+  }
+
+  .page-header__logo--tablet {
+    display: block;
+  }
+
+  .page-header__logo--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo--mobile {
+    display: none;
+  }
+
+  .page-header__logo--tablet {
+    display: none;
+  }
+
+  .page-header__logo--desktop {
+    display: block;
+
+  }
+}

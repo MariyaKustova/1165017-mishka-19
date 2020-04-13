@@ -1,5 +1,5 @@
 .copyright {
-  padding-top: 28px;
+  padding-top: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,8 +9,27 @@
   .font (19px; 18px);
   color: @color-black;
   margin-right: 30px;
+
+  &:active {
+    color: @color-black-active;
+  }
 }
 
 .copyright__link svg {
   fill: @color-turquoise;
+
+  &:hover {
+    fill: @color-dark-turquoise-hover;
+  }
+
+  &:active {
+    fill: @color-dark-turquoise-hover;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 0;
+  }
 }

@@ -7,8 +7,39 @@
   .list-reset ();
   display: flex;
   justify-content: center;
+  align-items: baseline;
 }
 
 .social__link {
   .display-block-link ();
+  padding: 0 21px;
+}
+
+.social__link svg {
+  fill: @color-black;
+
+  &:hover {
+    fill: @color-dark-turquoise-hover;
+  }
+
+  &:active {
+    fill: @color-dark-turquoise-hover;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+    margin-left: 78px;
+    padding: 4px 0 0;
+  }
+
+  .social-item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .social__link {
+    padding: 0;
+  }
 }

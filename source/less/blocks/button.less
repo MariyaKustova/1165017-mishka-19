@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+}
+
 .button {
   .font (17px; 20px);
   text-transform: uppercase;
@@ -6,4 +10,14 @@
   padding: 14px;
   border: 2px solid @color-greyish-brown;
   background-color: @color-white;
+
+  &:hover {
+    background-color: @color-greyish-brown;
+    color: @color-white;
+  }
+
+  &:active {
+    background-color: @color-greyish-brown;
+    color: @color-white-active;
+  }
 }

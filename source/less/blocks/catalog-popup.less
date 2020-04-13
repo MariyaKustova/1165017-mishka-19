@@ -32,9 +32,17 @@
 .catalog-popup__item {
   width: 82px;
   box-sizing: border-box;
-  border: 2px solid @base-color;
+  border: 2px solid @color-popap-item;
   padding: 20px;
   text-align: center;
+
+  &:hover {
+    border-color: @color-radio-toggle-active;
+  }
+
+  &:active {
+    border-color: @color-radio-toggle;
+  }
 }
 
 .catalog-popup__item--active {

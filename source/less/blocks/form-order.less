@@ -43,6 +43,7 @@
 }
 
 .form-order__title {
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -52,6 +53,11 @@
   margin-bottom: 15px;
   border: none;
   border-bottom: 2px solid @color-black;
+
+  &:hover,
+  &:active {
+    border-color: @color-radio-toggle;
+  }
 }
 
 .form-order__textarea {
@@ -63,4 +69,9 @@
   margin-top: 5px;
   margin-bottom: 13px;
   border: 2px solid @color-black;
+
+  &:hover,
+  &:active {
+    border-color: @color-radio-toggle;
+  }
 }
