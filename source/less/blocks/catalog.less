@@ -5,10 +5,20 @@
 .catalog__item {
   border: 1px solid @base-color;
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog__description {
   .link-reset (@color-black);
+  .display-block-link ();
+  text-align: center;
 }
 
 .catalog__image-product {
@@ -18,7 +28,16 @@
 
 .catalog__title-product {
   .font (17px; 24px);
+  text-align: left;
   margin: 0 28px 17px;
+
+  &:hover {
+    color:@color-black-hover;
+  }
+
+  &:active {
+    color:@color-black-active;
+  }
 }
 
 .catalog__description-text {

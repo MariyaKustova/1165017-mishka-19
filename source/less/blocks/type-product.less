@@ -22,6 +22,14 @@
   position: absolute;
   top: -9px;
   left: -1px;
+
+  &:hover {
+    border-color: @color-radio-toggle;
+  }
+
+  &:active {
+    border-color: @color-radio-toggle-active;
+  }
 }
 
 .type-product__title input[type="radio"]:checked + .type-product__radio-toggle::before {
@@ -29,7 +37,7 @@
   display: block;
   .size (15px; 15px);
   border-radius: 50%;
-  background-color: @color-turquoise;
+  background-color: @color-radio-toggle;
   position: absolute;
   top: 10px;
   left: 10px;

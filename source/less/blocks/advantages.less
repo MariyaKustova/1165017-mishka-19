@@ -10,4 +10,154 @@
 
 .advantages__item {
   padding: 85px 10px 0 0;
+  position: relative;
+}
+
+.advantages__item--eco-materials {
+  padding-right: 63px;
+}
+
+.advantages__item--price {
+  padding-right: 36px;
+}
+
+.advantages__item--like {
+  padding-right: 55px;
+}
+
+.advantages__item--eco-materials::before {
+  content: "";
+  display: block;
+  .size (32px; 37px);
+  background-image: url(../../img/index/icon-feature-flower.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 33px;
+  left: 8px;
+}
+
+.advantages__item--price::before {
+  content: "";
+  display: block;
+  .size (47px; 27px);
+  background-image: url(../../img/index/icon-feature-money.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 34px;
+  left: 0;
+}
+
+.advantages__item--like::before {
+  content: "";
+  display: block;
+  .size (33px; 27px);
+  background-image: url(../../img/index/icon-feature-heart.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 39px;
+  left: 8px;
+}
+
+.advantages__item--love::before {
+  content: "";
+  display: block;
+  .size (35px; 34px);
+  background-image: url(../../img/index/icon-feature-ball.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 36px;
+  left: 3px;
+}
+
+.advantages__item--manufacturer::before {
+  content: "";
+  display: block;
+  .size (55px; 23px);
+  background-image: url(../../img/index/icon-feature-rocket.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 37px;
+  left: -6px;
+}
+
+.advantages__item--packaging::before {
+  content: "";
+  display: block;
+  .size (33px; 32px);
+  background-image: url(../../img/index/icon-feature-gift.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 35px;
+  left: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__title {
+    .font (43px; 50px);
+    margin-bottom: -6px;
+  }
+
+  .advantages__list {
+    column-count: 2;
+    column-gap: 0;
+  }
+
+  .advantages__item {
+    .font(20px; 22px);
+    padding-right: 0;
+    padding-top: 110px;
+  }
+
+  .advantages__item--eco-materials {
+    padding-right: 103px;
+  }
+
+  .advantages__item--price,
+  .advantages__item--like {
+    padding-right: 101px;
+  }
+
+  .advantages__item--love {
+    padding-right: 34px;
+  }
+
+  .advantages__item--packaging {
+    padding-right: 40px;
+  }
+
+  .advantages__item--eco-materials::before {
+    content: "";
+    top: 54px;
+    left: 10px;
+  }
+
+  .advantages__item--price::before {
+    content: "";
+    top: 57px;
+    left: 2px;
+  }
+
+  .advantages__item--like::before {
+    content: "";
+    top: 63px;
+    left: 10px;
+  }
+
+  .advantages__item--love::before {
+    content: "";
+    top: 58px;
+    left: 3px;
+  }
+
+  .advantages__item--manufacturer::before {
+    content: "";
+    top: 60px;
+    left: -6px;
+  }
+
+  .advantages__item--packaging::before {
+    content: "";
+    top: 59px;
+    left: 3px;
+  }
 }

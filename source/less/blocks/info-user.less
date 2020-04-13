@@ -12,6 +12,7 @@
 }
 
 .info-user__text {
+  display: block;
   .font (17px; 18px);
   margin-bottom: 13px;
 }
@@ -21,4 +22,9 @@
   padding-bottom: 18px;
   border: none;
   border-bottom: 2px solid @color-black;
+
+  &:hover,
+  &:active {
+    border-color: @color-radio-toggle;
+  }
 }

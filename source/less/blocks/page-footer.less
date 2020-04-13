@@ -1,5 +1,34 @@
 .page-footer {
   background-color: @color-lite-grey;
-  margin: 0 -30px;
-  padding: 30px;
+}
+
+.page-footer__wrapper {
+  padding: 24px 30px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    padding: 52px 49px 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .page-footer__logo {
+    display: block;
+    fill: @color-black;
+
+    &:hover {
+      fill: @color-dark-turquoise-hover;
+    }
+
+    &:active {
+      fill: @color-dark-turquoise-hover;
+      opacity: 0.3;
+    }
+  }
 }
