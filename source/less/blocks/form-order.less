@@ -49,8 +49,9 @@
 
 .form-order__input {
   width: 100%;
+  box-sizing: border-box;
   padding-bottom: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 32px;
   border: none;
   border-bottom: 2px solid @color-black;
 
@@ -58,6 +59,28 @@
   &:active {
     border-color: @color-radio-toggle;
   }
+}
+
+.form-order__phone,
+.form-order__e-mail {
+  position: relative;
+}
+
+.form-order__input--handset,
+.form-order__input--letter {
+  padding-right: 35px;
+}
+
+.form-order__svg--phone,
+.form-order__svg--letter {
+  position: absolute;
+  z-index: 1;
+  top: 34px;
+  right: 8px;
+}
+
+.form-order__svg--letter {
+  right: 4px;
 }
 
 .form-order__textarea {
