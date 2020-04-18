@@ -30,16 +30,13 @@
   position: relative;
 }
 
-.form-order__fieldset legend::before,
-.form-order__title::before {
+.form-order__fieldset legend::after,
+.form-order__title::after {
   content: "";
-  display: block;
-  width: 198px;
+  display: inline-block;
+  vertical-align: middle;
   height: 1px;
   background-color: @color-turquoise;
-  position: absolute;
-  top: 8px;
-  left: 60px;
 }
 
 .form-order__title {
@@ -49,8 +46,9 @@
 
 .form-order__input {
   width: 100%;
+  box-sizing: border-box;
   padding-bottom: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 32px;
   border: none;
   border-bottom: 2px solid @color-black;
 
@@ -58,6 +56,38 @@
   &:active {
     border-color: @color-radio-toggle;
   }
+
+  &:hover + .form-order__svg--phone,
+  &:hover + .form-order__svg--letter,
+  &:active + .form-order__svg--phone,
+  &:active + .form-order__svg--letter {
+    fill: @color-radio-toggle;
+    opacity: 1;
+  }
+}
+
+.form-order__phone,
+.form-order__e-mail {
+  position: relative;
+}
+
+.form-order__input--handset,
+.form-order__input--letter {
+  padding-right: 35px;
+}
+
+.form-order__svg--phone,
+.form-order__svg--letter {
+  fill: @color-black;
+  opacity: 0.2;
+  position: absolute;
+  z-index: 1;
+  top: 34px;
+  right: 8px;
+}
+
+.form-order__svg--letter {
+  right: 4px;
 }
 
 .form-order__textarea {

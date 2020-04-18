@@ -1,25 +1,43 @@
 .production-process {
   border: 1px solid @base-color;
   box-sizing: border-box;
+  position: relative;
 }
 
 .production-process__title {
   .font (17px; 24px);
   margin: 0;
-  padding: 29px 42px 26px 91px;
+  padding: 22px 42px 26px 90px;
+  background-image: url("../../img/catalog/icon-video.svg");
+  background-repeat: no-repeat;
+  background-size: 46px 32px;
+  background-position: 26px 28px;
 }
 
 .production-process__video {
-  margin-bottom: 34px;
+  position: relative;
+}
+
+.production-process__button--play {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
 }
 
 .production-process__wrapper-description {
-  padding: 34px;
+  padding: 24px 34px 3px;
 }
 
 .production-process__text {
   .font (13px; 24px);
   .weight(400);
   color: @color-greyish-brown;
-  margin: 0 0 29px;
+  margin: 0 0 25px;
+}
+
+.production-process__button {
+  .weight (bold);
 }
