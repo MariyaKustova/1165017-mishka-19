@@ -16,17 +16,15 @@
 
 .production-process__video {
   position: relative;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    .size (101px; 77px);
-    background-image: url("../../img/catalog/icon-play.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 35px;
-    left: 80px;
-  }
+.production-process__button--play {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
 }
 
 .production-process__wrapper-description {

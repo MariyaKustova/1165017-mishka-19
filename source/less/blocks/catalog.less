@@ -59,6 +59,21 @@
   font-size: 0;
   background-color: transparent;
   border: none;
+
+  .catalog__button--busket {
+    fill: @color-black;
+    opacity: 0.2;
+  }
+
+  &:hover .catalog__button--busket {
+    fill: @color-turquoise;
+    opacity: 1;
+  }
+
+  &:active .catalog__button--busket {
+    fill: @color-turquoise;
+    opacity: 0.3;
+  }
 }
 
 .catalog__price {
