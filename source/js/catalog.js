@@ -5,11 +5,17 @@ var buttonAdd=document.querySelector(".catalog-popup__button");
 var popup=document.querySelector(".catalog-popup");
 var body=document.querySelector(".body__wrapper");
 
-buttonMenu.addEventListener("click", function(evt){
-  evt.preventDefault();
-  navigation.classList.toggle("main-nav--closed");
-  navigation.classList.toggle("main-nav--opened");
-})
+navigation.classList.remove("main-nav--nojs");
+
+buttonMenu.addEventListener("click", function () {
+  if (navigation.classList.contains("main-nav--closed")) {
+    navigation.classList.remove("main-nav--closed");
+    navigation.classList.add("main-nav--opened");
+  } else {
+    navigation.classList.add("main-nav--closed");
+    navigation.classList.remove("main-nav--opened");
+  }
+});
 
 buttonBusket.addEventListener("click", function(evt){
   evt.preventDefault();

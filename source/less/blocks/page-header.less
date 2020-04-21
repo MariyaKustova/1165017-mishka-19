@@ -1,9 +1,6 @@
 .page-header {
   position: relative;
-}
-
-.page-header__wrapper {
-  margin: 0 auto;
+  margin: 0 -30px;
 }
 
 .page-header__logo {
@@ -28,12 +25,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    border-bottom: 1px solid @base-color;
-  }
-
-  .page-header__wrapper {
+    margin: 0 -49px;
     padding: 0 49px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
@@ -49,6 +42,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
   .page-header__logo-image {
     .size(149px; 72px);
   }

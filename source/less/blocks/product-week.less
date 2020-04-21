@@ -1,11 +1,11 @@
 .product-week {
   .font (15px; 24px);
   color: @color-greyish-brown;
+  position: relative;
 }
-
 .product-week__title {
   .section-header ();
-  margin: 0 0 5px 0;
+  margin: 0 0 5px -3px;
 }
 
 .product-week__subheading {
@@ -30,10 +30,14 @@
   border-bottom: 1px solid @base-color;
 }
 
+.product-week__value {
+  width: 88px;
+}
+
 .product-week__image {
   display: flex;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 }
 
 .product-week__image-product {
@@ -49,18 +53,16 @@
 
 @media (min-width: @tablet-width) {
   .product-week {
-    position: relative;
-  }
-
-  .product-week::before {
-    content: "";
-    background-image: url("../../img/index/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    display: block;
-    width: 100%;
-    height: 23px;
-    position: absolute;
-    bottom: -70px;
+    &::before {
+      content: "";
+      background-image: url("../../img/index/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      display: block;
+      width: 100%;
+      height: 23px;
+      position: absolute;
+      bottom: -70px;
+    }
   }
 
   .product-week__heading {
@@ -82,9 +84,11 @@
   }
 
   .product-week__wrapper {
+    min-height: 404px;
     padding-right: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: relative;
   }
 
@@ -117,5 +121,47 @@
 
   .product-week__button {
     .weight(bold);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-week {
+    padding-top: 20px;
+
+    &::before {
+      content: "";
+      left: 0;
+      bottom: -94px;
+    }
+  }
+
+  .product-week__heading {
+    position: absolute;
+    z-index: 1;
+    top: 78px;
+    left:  48px;
+  }
+
+  .product-week__title {
+    .font (53px; 57px);
+    order: 2;
+  }
+
+  .product-week__wrapper {
+    min-height: 642px;
+    padding-right: 61.5%;
+  }
+
+  .product-week__description-text {
+    padding-top: 164px;
+    margin-right: 50px;
+  }
+
+  .product-week__description {
+    margin-bottom: 45px;
+  }
+
+  .product-week__subheading {
+   margin: 0 56px 0 0;
   }
 }
