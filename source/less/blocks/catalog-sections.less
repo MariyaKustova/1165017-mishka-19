@@ -1,13 +1,27 @@
 .catalog-sections {
   height: 488px;
-  background-image: url("../../img/index/hero-mobile@1x.jpg"), url("../../img/index/bg-catalog-section.jpg");
-  background-repeat: no-repeat, repeat-x ;
-  background-position: center -18px, 0 0 ;
-  background-size: auto, auto;
+  background: #fafafa url(../../img/index/bg-catalog-section.jpg) repeat-x top
+    left;
   position: relative;
 
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../../img/retina/hero-mobile@2x.jpg");
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../../img/index/hero-mobile@1x.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 260px;
+    height: 370px;
+    z-index: 1;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/retina/hero-mobile@2x.jpg");
+    }
   }
 }
 
@@ -16,6 +30,8 @@
   text-align: center;
   padding: 69px 35px 122px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .catalog-sections__text {
@@ -32,6 +48,7 @@
   width: 100%;
   .list-reset();
   position: absolute;
+  z-index: 1;
   bottom: 0;
 }
 
@@ -102,15 +119,20 @@
   .catalog-sections {
     height: 746px;
     margin: 0 -49px 45px;
-    background-image: url("../../img/index/hero-tablet@1x.jpg");
-    background-position: center 0;
-    background-size: 1150px auto;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/retina/hero-tablet@2x.jpg");
-    }
 
     &::before {
+      content: "";
+      background-image: url("../../img/index/hero-tablet@1x.jpg");
+      background-position: center 15px;
+      width: 1150px;
+      height: 746px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/retina/hero-tablet@2x.jpg");
+      }
+    }
+
+    &::after {
       content: "";
       background-image: url("../../img/index/bg-zigzag-fill.svg");
       display: block;
@@ -167,11 +189,13 @@
 
 @media (min-width: @desktop-width) {
   .catalog-sections {
-    background-image: url("../../img/index/hero-desktop@1x.jpg");
-    background-position: 0 0;
+    &::before {
+      background-image: url("../../img/index/hero-desktop@1x.jpg");
+      background-position: 0 16px;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/retina/hero-desktop@2x.jpg");
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/retina/hero-desktop@2x.jpg");
+      }
     }
   }
 

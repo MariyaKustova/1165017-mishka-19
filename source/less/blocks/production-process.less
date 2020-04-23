@@ -7,11 +7,11 @@
 .production-process__title {
   .font (17px; 24px);
   margin: 0;
-  padding: 22px 42px 26px 90px;
+  padding: 23px 42px 25px 90px;
   background-image: url("../../img/catalog/icon-video.svg");
   background-repeat: no-repeat;
   background-size: 46px 32px;
-  background-position: 26px 28px;
+  background-position: 26px 29px;
 }
 
 .production-process__video {
@@ -24,11 +24,14 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50% -50%);
+  transform: translate(-50%; -64%);
 }
 
 .production-process__wrapper-description {
-  padding: 24px 34px 3px;
+  padding: 27px 34px 32px;
+  margin-top: -29px;
+  background-color: white;
+  position: relative;
 }
 
 .production-process__text {
@@ -40,4 +43,76 @@
 
 .production-process__button {
   .weight (bold);
+
+  &:hover {
+    color: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .production-process {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 63px;
+  }
+
+  .production-process__video {
+    height: 455px;
+    order: -1;
+  }
+
+  .production-process__button--play {
+    transform: translate(-50%; -50%);
+  }
+
+  .production-process__title {
+    .font(20px; 24px);
+    padding-top: 37px;
+    padding-left: 106px;
+    z-index: 2;
+    background-position: 35px 32px;
+  }
+
+  .production-process__text {
+    .font (15px; 30px);
+    margin-bottom: 35px;
+  }
+
+  .production-process__wrapper-description {
+    padding: 7px 41px 45px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production-process {
+    min-height: 455px;
+    padding-left: 720px;
+    margin-bottom: 106px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .production-process__title {
+    .font (20px; 24px);
+    padding: 94px 95px 27px 41px;
+    background-position-y: 41px;
+  }
+
+  .production-process__video {
+    width: 682px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .production-process__wrapper-description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 58px;
+    padding-bottom: 59px;
+  }
 }
