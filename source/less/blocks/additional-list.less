@@ -1,0 +1,22 @@
+.additional-list {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .additional-list {
+    max-width: 700px;
+    display: flex;
+    .list-reset ();
+    position: absolute;
+    z-index: 1;
+    top: 89px;
+    left: 51px;
+  }
+
+  .additional-list__link {
+    .font (15px; 24px);
+    .link-reset (@color-black);
+    .display-block-link();
+    padding: 17px 60px 17px 0;
+  }
+}

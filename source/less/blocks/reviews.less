@@ -58,38 +58,39 @@
 @media (min-width: @tablet-width) {
   .reviews {
     position: relative;
-  }
 
-  .reviews::before {
-    content: "";
-    display: block;
-    .size (350px; 457px);
-    background-image: url("../../img/index/review@1x.jpg");
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: -49px;
+    &::before {
+      content: "";
+      display: block;
+      .size (350px; 457px);
+      background-image: url("../../img/index/review@1x.jpg");
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: -49px;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/retina/review@2x.jpg");
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/retina/review@2x.jpg");
+      }
     }
-  }
 
-  .reviews::after {
-    content: "";
-    display: block;
-    background-image: url("../../img/index/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    width: 100%;
-    height: 23px;
-    position: absolute;
-    bottom: -135px;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../../img/index/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      width: 100%;
+      height: 23px;
+      position: absolute;
+      bottom: -135px;
+    }
   }
 
   .reviews__title {
     .font (43px; 50px);
     padding-top: 77px;
+    margin-left: -4px;
     margin-bottom: 49px;
   }
 
@@ -109,7 +110,7 @@
   }
 
   .reviews__button {
-    .size (91px; 52px);
+    .size (89px; 52px);
     border: none;
   }
 
@@ -125,5 +126,30 @@
     position: absolute;
     top: 79px;
     right: 1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    &::before {
+      content: "";
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      left: 0;
+      bottom: -185px;
+    }
+  }
+
+  .reviews__title {
+    .font (53px; 57px);
+    padding-top: 70px;
+  }
+
+  .reviews__text {
+    margin-right: 106px;
+    margin-bottom: 40px;
   }
 }
