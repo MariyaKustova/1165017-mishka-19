@@ -7,6 +7,16 @@ body {
   background-color: @color-white;
 
   .indent(0;0);
+
+  position: relative;
+}
+
+.body__wrapper {
+  padding: 0 30px;
+}
+
+.body__wrapper--opacity {
+  opacity: 0.2;
 }
 
 img {
@@ -16,4 +26,18 @@ img {
 
 a {
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .body__wrapper {
+    padding: 0 49px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .body__wrapper {
+    width: 1150px;
+    box-sizing: border-box;
+  }
 }

@@ -23,7 +23,9 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
+    max-width: 440px;
     display: flex;
+    flex-wrap: wrap;
     border: none;
     position: absolute;
     z-index: 1;
@@ -44,11 +46,21 @@
 @media (min-width: @desktop-width) {
   .site-list {
     position: relative;
+    top: 0;
+    left: 0;
+    order: -1;
+  }
+
+  .site-list__item:not(:last-child) {
+    margin-right: 35px;
   }
 
   .site-list__link {
     .font(17px; 24px);
+    padding: 31px 36px 33px 0;
+  }
 
-
+  .site-list__link:not(:last-child) {
+    border-right: 1px solid @base-color;
   }
 }

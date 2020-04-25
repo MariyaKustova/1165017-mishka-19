@@ -1,14 +1,15 @@
 .contacts__title {
   .font(18px; 30px);
-  margin-bottom: 0;
+  margin-bottom: -2px;
+  padding: 0 30px;
 }
 
 .contacts__list {
   .font(15px; 30px);
   .weight(400);
   color: @color-greyish-brown;
-  margin-bottom: 36px;
   .list-reset ();
+  margin:0 30px 38px;
   display: table;
 }
 
@@ -47,13 +48,14 @@
 
 iframe {
   .size(100%; 457px);
-  margin: 0 0 43px;
+  margin: 0 0 36px;
 }
 
 .contacts__write {
   .font(18px; 20px);
   display: block;
-  width: 100%;
+  width: auto;
+  margin: 0 30px;
   .link-reset(@color-greyish-brown);
   text-align: center;
 }
@@ -67,45 +69,93 @@ iframe {
     content: "";
     display: block;
     .size (47px; 81px);
-    background-image: url(../../img/index/icon-flag.svg);
+    background-image: url("../../img/index/icon-flag.svg");
     background-repeat: no-repeat;
     position: absolute;
     top: -15px;
-    right: 4px;
+    right: 34px;
   }
 
   .contacts__title {
     .font(43px; 50px);
+    margin-left: -4px;
   }
 
-.contacts__list {
-  font-size: 17px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 55px;
+  .contacts__list {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 57px;
+  }
+
+  .contacts__item {
+    flex-grow: 1;
+  }
+
+  .contacts__item span {
+    min-width: 68px;
+  }
+
+  .contacts__value,
+  .contacts__field {
+    padding: 50px 9px 0 0;
+  }
+
+  iframe {
+    .size(785px; 457px);
+    margin: 0 -18px 52px;
+  }
+
+  .contacts__write {
+    width: fit-content;
+    padding: 14px 35px;
+    margin: 0 auto;
+  }
 }
 
-.contacts__item {
-  flex-grow: 1;
-}
+@media (min-width: @desktop-width) {
+  .contacts {
+    min-height: 457px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.contacts__item span {
-  min-width: 70px;
-}
+  .contacts::before {
+    content: "";
+    top: 62px;
+    left: 94px;
+  }
 
-.contacts__value,
-.contacts__field {
-  padding: 50px 9px 0 0;
-}
+  .contacts__title {
+    .font(53px; 57px);
+    padding: 26px 0 0 0;
+    margin-bottom: 49px;
+  }
 
-iframe {
-  .size(768px; 457px);
-  margin: 0 -49px 52px;
-}
+  .contacts__list {
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 
-.contacts__write {
-  width: fit-content;
-  padding: 14px 35px;
-  margin: 0 auto;
-}
+  .contacts__item span {
+    min-width: 76px;
+  }
+
+  .contacts__value,
+  .contacts__field {
+    padding: 0 0 30px 0;
+  }
+
+  iframe {
+    .size (525px; 457px);
+    position: absolute;
+    top: 0;
+    right: 49px;
+  }
+
+  .contacts__write {
+    margin-top: auto;
+    margin-left: 0;
+  }
 }
