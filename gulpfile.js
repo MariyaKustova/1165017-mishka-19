@@ -7,7 +7,9 @@ var rename = require("gulp-rename");
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var htmlmin = require("gulp-htmlmin");
 var csso = require("gulp-csso");
+var uglify = require("gulp-uglify");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
@@ -66,16 +68,26 @@ gulp.task("html", function () {
   return gulp
     .src("source/*.html")
     .pipe(posthtml([include()]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("jsmin", function () {
+  return gulp
+    .src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("copy", function () {
   return gulp
     .src(
       [
-        "source/fonts/**/*{woff, woff2}",
+        "source/fonts/**/*.woff",
+        "source/fonts/**/*.woff2",
         "source/img/**",
-        "source/js/**",
+        "source/js/vendor/*.js",
         "source/*.ico",
       ],
       {
@@ -85,13 +97,13 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("build");
 });
 
 gulp.task("server", function () {
   server.init({
-    server: "build/"
+    server: "build/",
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
@@ -104,6 +116,9 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task(
+  "build",
+  gulp.series("clean", "copy", "jsmin", "css", "sprite", "html")
+);
 
 gulp.task("start", gulp.series("build", "server"));
