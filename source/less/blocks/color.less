@@ -1,3 +1,8 @@
+.color {
+  .weight();
+  margin-left: 1px;
+}
+
 .color__header {
   margin-bottom: 35px;
 }
@@ -30,6 +35,16 @@
   }
 }
 
+.color__label {
+  &:hover .checkbox-toggle {
+    border-color: @color-radio-toggle;
+  }
+
+  &:active .checkbox-toggle {
+    border-color: @color-radio-toggle-active;
+  }
+}
+
 .color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
   content: "";
   display: block;
@@ -44,4 +59,60 @@
 
 .color__title {
   .font (17px; 18px);
+}
+
+@media (min-width: @tablet-width) {
+  .color {
+    padding-left: 170px;
+  }
+
+  .color__list {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .color__item {
+    min-width: 177px;
+    margin-bottom: 57px;
+  }
+
+  .checkbox-toggle {
+    .size (50px; 50px);
+    top: -16px;
+    left: -2px;
+  }
+
+  .color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
+    content: "";
+    .size (14px; 27px);
+    top: 7px;
+    left: 18px;
+  }
+
+  .color__title {
+    .font(19px; 18px);
+    padding-left: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .color {
+    padding: 0 149px 0 177px;
+  }
+
+  .color__item {
+    min-width: 139px;
+  }
+
+  .checkbox-toggle {
+    .size (48px; 48px);
+  }
+
+  .color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
+    content: "";
+    top: 5px;
+    left: 16px;
+  }
 }

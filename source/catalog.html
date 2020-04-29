@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
-    <link href="./css/normalize.min.css" rel="stylesheet" />
     <link href="./css/style.min.css" rel="stylesheet" />
   </head>
   <body>
@@ -60,10 +59,23 @@
               </a>
             </li>
           </ul>
+          <ul class="main-nav__list additional-list">
+            <li class="additional-list__item">
+              <a class="additional-list__link" href="#">
+                Новые поступления
+              </a>
+            </li>
+            <li class="additional-list__item">
+              <a class="additional-list__link" href="#">
+                Распродажа
+              </a>
+            </li>
+          </ul>
         </nav>
       </header>
 
       <main class="page-main">
+        <p class="page-main__order">Бесплатная доставка по России</p>
         <div class="page-main__wrapper-title">
           <h1 class="page-main__title">Каталог товаров</h1>
         </div>
@@ -320,13 +332,11 @@
                 src="./img/catalog/video-mobile@1x.jpg"
                 alt="Видео процесса производства"
                 srcset="./img/retina/video-mobile@1x.jpg"
+                loading="lazy"
               />
             </picture>
             <button class="production-process__button--play" type="button">
               <span class="visually-hidden">Воспроизвести видео</span>
-              <svg width="100.678px" height="76.891px">
-                <use xlink:href="./img/sprite.svg#icon-play"></use>
-              </svg>
             </button>
           </div>
           <div class="production-process__wrapper-description">
