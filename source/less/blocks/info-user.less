@@ -1,5 +1,6 @@
 .info-user__header {
   margin-bottom: 28px;
+  .weight();
 }
 
 .info-user__list {
@@ -14,6 +15,7 @@
 .info-user__text {
   display: block;
   .font (17px; 18px);
+  .weight();
   margin-bottom: 13px;
 }
 
@@ -27,4 +29,44 @@
   &:active {
     border-color: @color-radio-toggle;
   }
+}
+
+@media (min-width: @tablet-width) {
+  .info-user {
+    margin-top: 10px;
+  }
+
+  .info-user__list {
+    margin-bottom: 0;
+  }
+
+  .info-user__item:not(:last-child) {
+    margin-bottom: 34px;
+  }
+
+  .info-user__item label {
+    display: flex;
+  }
+
+  .info-user__item span {
+    .font(19px; 18px);
+    margin-right: 26px;
+    padding-top: 5px;
+  }
+
+  .info-user__item input {
+    .font(19px; 18px);
+    padding: 0 0 14px 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-user {
+    padding-left: 174px;
+    padding-right: 177px;
+  }
+
+  .info-user__list {
+    margin-left: 3px;
+}
 }
