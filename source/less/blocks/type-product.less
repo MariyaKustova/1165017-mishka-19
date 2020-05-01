@@ -67,8 +67,7 @@
   .type-product {
     max-width: 1050px;
     box-sizing: border-box;
-    padding-left: 175px;
-    padding-right: 177px;
+    padding: 0 166px;
     margin: 0 auto 18px;
   }
 
@@ -102,5 +101,11 @@
     .size (20px; 20px);
     top: 15px;
     left: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .type-product {
+    padding: 0 175px;
   }
 }
