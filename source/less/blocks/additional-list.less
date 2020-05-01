@@ -10,7 +10,7 @@
     position: absolute;
     z-index: 1;
     top: 89px;
-    left: 51px;
+    left: 0;
   }
 
   .additional-list__link {
@@ -18,6 +18,14 @@
     .weight ();
     .link-reset (@color-black);
     .display-block-link();
-    padding: 17px 60px 17px 0;
+    padding: 17px 62px 17px 0;
+
+    &:hover {
+      color: @color-black-hover;
+    }
+
+    &:active {
+      color: @color-black-active;
+    }
   }
 }
