@@ -72,9 +72,9 @@
             </li>
           </ul>
         </nav>
+        <p class="page-header__order">Бесплатная доставка по России</p>
       </header>
       <main class="page-main">
-        <p class="page-main__order">Бесплатная доставка по России</p>
         <div class="page-main__wrapper-title">
           <h1 class="page-main__title">Вязание на заказ</h1>
         </div>
@@ -93,7 +93,7 @@
           <ul class="form-order__list">
             <li class="form-order__item">
               <fieldset class="form-order__fieldset type-product">
-                <legend class="type-product__header">ТИП</legend>
+                <legend class="type-product__header"><span class="type-product__header-text">ТИП</span></legend>
                 <ul class="type-product__list">
                   <li class="type-product__item">
                     <label class="type-product__title">
@@ -127,7 +127,7 @@
             </li>
             <li class="form-order__item">
               <fieldset class="form-order__fieldset color">
-                <legend class="color__header">Цвет</legend>
+                <legend class="color__header"><span class="color__header-text">Цвет</span></legend>
                 <ul class="color__list">
                   <li class="color__item">
                     <label class="color__label">
@@ -137,7 +137,7 @@
                         name="white"
                         checked
                       />
-                      <span class="checkbox-toggle"></span>
+                      <span class="color__checkbox-toggle"></span>
                       <span class="color__title">Белый</span>
                     </label>
                   </li>
@@ -149,7 +149,7 @@
                         name="grey"
                         checked
                       />
-                      <span class="checkbox-toggle"></span>
+                      <span class="color__checkbox-toggle"></span>
                       <span class="color__title">Серый</span>
                     </label>
                   </li>
@@ -160,7 +160,7 @@
                         type="checkbox"
                         name="tiffany"
                       />
-                      <span class="checkbox-toggle"></span>
+                      <span class="color__checkbox-toggle"></span>
                       <span class="color__title">«Тиффани»</span>
                     </label>
                   </li>
@@ -171,7 +171,7 @@
                         type="checkbox"
                         name="black"
                       />
-                      <span class="checkbox-toggle"></span>
+                      <span class="color__checkbox-toggle"></span>
                       <span class="color__title">Черный</span>
                     </label>
                   </li>
@@ -182,7 +182,7 @@
                         type="checkbox"
                         name="pink"
                       />
-                      <span class="checkbox-toggle"></span>
+                      <span class="color__checkbox-toggle"></span>
                       <span class="color__title">Розовый</span>
                     </label>
                   </li>
@@ -193,7 +193,7 @@
                         type="checkbox"
                         name="orange"
                       />
-                      <span class="checkbox-toggle"></span>
+                      <span class="color__checkbox-toggle"></span>
                       <span class="color__title">Оранжевый</span>
                     </label>
                   </li>
@@ -202,7 +202,7 @@
             </li>
             <li class="form-order__item">
               <fieldset class="form-order__fieldset info-user">
-                <legend class="info-user__header">ФИО</legend>
+                <legend class="info-user__header"><span class="info-user__header-text">ФИО</span></legend>
                 <ul class="info-user__list">
                   <li class="info-user__item">
                     <label class="info-user__name">
@@ -278,8 +278,7 @@
                   rows="5"
                   cols="10"
                   name="wish"
-                  placeholder="Опишите все ваши
-          пожелания к заказу"
+                  placeholder="Опишите все ваши пожелания к заказу"
                   aria-label="Опишите все ваши пожелания к заказу"
                 ></textarea>
               </label>
@@ -296,44 +295,46 @@
         </form>
       </main>
       <footer class="page-footer">
-        <svg class="page-footer__logo" width="101.615px" height="34.056px">
-          <use xlink:href="./img/sprite.svg#icon-footer"></use>
-        </svg>
-        <div class="page-footer__social social">
-          <ul class="social-list">
-            <li class="social-item">
-              <a class="social__link" href="#" aria-label="Инстаграм">
-                <svg width="21.769px" height="21.334px">
-                  <use xlink:href="./img/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social__link" href="#" aria-label="Фейсбук">
-                <svg width="14.962px" height="27.718px">
-                  <use xlink:href="./img/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social__link" href="#" aria-label="Твиттер">
-                <svg width="23.494px" height="20.168px">
-                  <use xlink:href="./img/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <span class="copyright__text">Разработано</span>
-          <a
-            class="copyright__link"
-            href="https://htmlacademy.ru/intensive/adaptive"
-          >
-            <svg width="26.943" height="34.09">
-              <use xlink:href="./img/sprite.svg#icon-htmlacademy"></use>
-            </svg>
-          </a>
+        <div class="page-footer__wrapper">
+          <svg class="page-footer__logo" width="101.615px" height="34.056px">
+            <use xlink:href="./img/sprite.svg#icon-footer"></use>
+          </svg>
+          <div class="page-footer__social social">
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="social__link" href="#" aria-label="Инстаграм">
+                  <svg width="21.769px" height="21.334px">
+                    <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social__link" href="#" aria-label="Фейсбук">
+                  <svg width="14.962px" height="27.718px">
+                    <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social__link" href="#" aria-label="Твиттер">
+                  <svg width="23.494px" height="20.168px">
+                    <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <span class="copyright__text">Разработано</span>
+            <a
+              class="copyright__link"
+              href="https://htmlacademy.ru/intensive/adaptive"
+            >
+              <svg width="26.943" height="34.09">
+                <use xlink:href="./img/sprite.svg#icon-htmlacademy"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </footer>
       <script src="./js/vendor/svg4everybody.min.js"></script>

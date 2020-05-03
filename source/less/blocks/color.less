@@ -5,6 +5,25 @@
 
 .color__header {
   margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: @color-turquoise;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    z-index: -1;
+  }
+}
+
+.color__header-text {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  padding-right: 17px;
 }
 
 .color__list {
@@ -17,7 +36,7 @@
   position: relative;
 }
 
-.checkbox-toggle {
+.color__checkbox-toggle {
   display: inline-block;
   vertical-align: top;
   .size (36px; 36px);
@@ -36,16 +55,16 @@
 }
 
 .color__label {
-  &:hover .checkbox-toggle {
+  &:hover .color__checkbox-toggle {
     border-color: @color-radio-toggle;
   }
 
-  &:active .checkbox-toggle {
+  &:active .color__checkbox-toggle {
     border-color: @color-radio-toggle-active;
   }
 }
 
-.color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
+.color__label input[type="checkbox"]:checked + .color__checkbox-toggle::before {
   content: "";
   display: block;
   .size (8px; 20px);
@@ -66,6 +85,15 @@
     padding-left: 170px;
   }
 
+  .color__header::before {
+    content: "";
+    display: none;
+  }
+
+  .color__header-text {
+    background-color: transparent;
+  }
+
   .color__list {
     padding-top: 15px;
     display: flex;
@@ -78,13 +106,13 @@
     margin-bottom: 57px;
   }
 
-  .checkbox-toggle {
+  .color__checkbox-toggle {
     .size (50px; 50px);
     top: -16px;
     left: -2px;
   }
 
-  .color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
+  .color__label input[type="checkbox"]:checked + .color__checkbox-toggle::before {
     content: "";
     .size (14px; 27px);
     top: 7px;
@@ -99,20 +127,31 @@
 
 @media (min-width: @desktop-width) {
   .color {
-    padding: 0 149px 0 177px;
+    max-width: 1050px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 145px 0 177px;
+  }
+
+  .color__list {
+    justify-content: flex-start;
   }
 
   .color__item {
     min-width: 139px;
   }
 
-  .checkbox-toggle {
-    .size (48px; 48px);
+  .color__item:not(:nth-child(3n)) {
+    margin-right: 63px;
   }
 
-  .color__label input[type="checkbox"]:checked + .checkbox-toggle::before {
+  .color__checkbox-toggle {
+    .size (49px; 49px);
+  }
+
+  .color__label input[type="checkbox"]:checked + .color__checkbox-toggle::before {
     content: "";
-    top: 5px;
+    top: 7px;
     left: 16px;
   }
 }

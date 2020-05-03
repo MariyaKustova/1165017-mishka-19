@@ -2,7 +2,6 @@
   background-color: @color-white;
   position: relative;
   z-index: 2;
-  margin: 0 -30px;
 }
 
 .page-header__logo {
@@ -25,9 +24,17 @@
   .size(86px; 35px);
 }
 
+.page-header__order {
+  .font (15px; 24px);
+  color: @color-greyish-brown;
+  position: absolute;
+  bottom: -57px;
+  right: 50px;
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
-    margin: 0 -49px;
     padding: 0 49px;
     display: flex;
     justify-content: space-between;
@@ -41,9 +48,21 @@
   .page-header__logo-image {
     .size(112px; 46px);
   }
+
+  .page-header__order {
+    display: block;
+    z-index: 1;
+    right: 50px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    max-width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
   .page-header__logo {
     position: absolute;
     top: 0;
@@ -53,5 +72,9 @@
 
   .page-header__logo-image {
     .size(149px; 72px);
+  }
+
+  .page-header__order {
+    right: 0;
   }
 }
