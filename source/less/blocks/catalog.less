@@ -62,7 +62,6 @@
 
 .catalog__control-wrapper {
   display: flex;
-  justify-content: space-between;
   padding: 22px 0 0 0;
   position: relative;
 
@@ -82,10 +81,12 @@
   font-size: 0;
   background-color: transparent;
   border: none;
+  position: relative;
+  right: -6px;
 
   .catalog__button--busket {
     position: relative;
-    right: -8px;
+    right: -1px;
     fill: @color-black;
     opacity: 0.2;
   }
@@ -105,6 +106,7 @@
   .font (15px; 24px);
   .weight();
   margin: 0;
+  margin-right: auto;
 }
 
 @media (min-width: @tablet-width) {

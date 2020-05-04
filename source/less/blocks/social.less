@@ -12,21 +12,21 @@
 }
 
 .social__link {
-  .display-block-link ();
+  .display-block-link();
   padding: 0 21px;
+
+  &:hover svg {
+    fill: @color-dark-turquoise-hover;
+  }
+
+  &:active svg{
+    fill: @color-dark-turquoise-hover;
+    opacity: 0.3;
+  }
 }
 
 .social__link svg {
   fill: @color-black;
-
-  &:hover {
-    fill: @color-dark-turquoise-hover;
-  }
-
-  &:active {
-    fill: @color-dark-turquoise-hover;
-    opacity: 0.3;
-  }
 }
 
 @media (min-width: @tablet-width) {

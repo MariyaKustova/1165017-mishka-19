@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
+    <script>document.createElement( "picture" );</script>
+    <script src="./js/vendor/picturefill.min.js" async></script>
   </head>
   <body>
     <div class="body__wrapper">
@@ -147,22 +149,22 @@
                   <source
                     media="(min-width: 1150px)"
                     srcset="
-                      ./img//WebP/1x/triple-set-desktop@1x.webp,
-                      ./img/WebP/retina/triple-set-desktop@2x.webp
+                      ./img/webp/index/triple-set-desktop@1x.webp,
+                      ./img/webp/index/triple-set-desktop@2x.webp
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img//WebP/1x/triple-set-tablet@1x.webp,
-                      ./img/WebP/retina/triple-set-tablet@2x.webp
+                      ./img/webp/index/triple-set-tablet@1x.webp,
+                      ./img/webp/index/triple-set-tablet@2x.webp
                     "
                   />
                   <source
                     media="(min-width: 320px)"
                     srcset="
-                      ./img/WebP/1x/triple-set-mobile@1x.webp,
-                      ./img/WebP/retina/triple-set-mobile@2x.webp
+                      ./img/webp/index/triple-set-mobile@1x.webp,
+                      ./img/webp/index/triple-set-mobile@2x.webp
                     "
                   />
 
@@ -170,20 +172,20 @@
                     media="(min-width: 1150px)"
                     srcset="
                       ./img/index/triple-set-desktop@1x.jpg,
-                      ./img/retina/triple-set-desktop@2x.jpg
+                      ./img/index/triple-set-desktop@2x.jpg
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
                       ./img/index/triple-set-tablet@1x.jpg,
-                      ./img/retina/triple-set-tablet@2x.jpg
+                      ./img/index/triple-set-tablet@2x.jpg
                     "
                   />
                   <img
                     class="product-week__image-product"
                     src="./img/index/triple-set-mobile@1x.jpg"
-                    srcset="./img/retina/triple-set-mobile@2x.jpg"
+                    srcset="./img/index/triple-set-mobile@2x.jpg"
                     loading="lazy"
                     alt="Фотография корзин"
                   />
@@ -389,7 +391,6 @@
     <script>
       svg4everybody();
     </script>
-    <script src="./js/vendor/picturefill.min.js"></script>
     <script src="./js/index.min.js"></script>
   </body>
 </html>
