@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
+    <script src="./js/vendor/picturefill.min.js"></script>
   </head>
   <body>
     <div class="body__wrapper">
@@ -248,6 +249,7 @@
                   type="tel"
                   name="phone"
                   placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+                  pattern="[0-9]{11}"
                 />
                 <svg
                   class="form-order__svg--phone"
@@ -341,7 +343,6 @@
       <script>
         svg4everybody();
       </script>
-      <script src="./js/vendor/picturefill.min.js"></script>
       <script src="./js/order.min.js"></script>
     </div>
   </body>
