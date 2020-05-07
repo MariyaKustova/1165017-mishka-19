@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
-    <script src="./js/vendor/picturefill.min.js"></script>
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="./js/vendor/picturfill.min.js" async></script>
   </head>
   <body>
     <div class="body__wrapper">
@@ -308,8 +312,8 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-header__logo" href="./index.html">
-            <svg class="page-footer__logo" width="101.615px" height="34.056px">
+          <a class="page-footer__logo" href="./index.html">
+            <svg class="page-footer__svg" width="101.615px" height="34.056px">
               <use xlink:href="./img/sprite.svg#icon-footer"></use>
             </svg>
           </a>

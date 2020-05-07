@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
-    <!-- <script src="./js/vendor/picturefill.min.js"></script> -->
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="./js/vendor/picturfill.min.js" async></script>
   </head>
   <body>
     <div class="body__wrapper">
@@ -88,42 +92,31 @@
                   <source
                     media="(min-width: 1150px)"
                     srcset="
-                      ./img/webp/catalog/photo-hare-desktop@1x.webp,
-                      ./img/webp/catalog/photo-hare-desktop@2x.webp
+                      ./img/webp/catalog/photo-hare-desktop@1x.webp 1x,
+                      ./img/webp/catalog/photo-hare-desktop@2x.webp 2x,
+                      ./img/catalog/photo-hare-desktop@1x.jpg 1x,
+                      ./img/catalog/photo-hare-desktop@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/catalog/photo-hare-tablet@1x.webp,
-                      ./img/webp/catalog/photo-hare-tablet@2x.webp
+                      ./img/webp/catalog/photo-hare-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-hare-tablet@2x.webp 2x,
+                      ./img/catalog/photo-hare-tablet@1x.jpg 1x,
+                      ./img/catalog/photo-hare-tablet@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 320px)"
                     srcset="
-                      ./img/webp/catalog/photo-hare-tablet@1x.webp,
-                      ./img/webp/catalog/photo-hare-tablet@2x.webp
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1150px)"
-                    srcset="
-                      ./img/catalog/photo-bowl-desktop@1x.jpg,
-                      ./img/catalog/photo-hare-desktop@2x.jpg
-                    "
-                  />
-                  <source
-                    media="(min-width: 785px)"
-                    srcset="
-                      ./img/catalog/photo-hare-tablet@1x.jpg,
-                      ./img/catalog/photo-hare-tablet@2x.jpg
+                      ./img/webp/catalog/photo-hare-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-hare-tablet@2x.webp 2x
                     "
                   />
                   <img
                     src="./img/catalog/photo-hare-mobile@1x.jpg"
-                    srcset="./img/catalog/photo-hare-mobile@2x.jpg"
+                    srcset="./img/catalog/photo-hare-mobile@2x.jpg 2x"
                     alt="Фотография Зайчика-попрыгайчика"
                   />
                 </picture>
@@ -154,42 +147,31 @@
                   <source
                     media="(min-width: 1150px)"
                     srcset="
-                      ./img/webp/catalog/photo-bowl-desktop@1x.webp,
-                      ./img/webp/catalog/photo-bowl-desktop@2x.webp
+                      ./img/webp/catalog/photo-bowl-desktop@1x.webp 1x,
+                      ./img/webp/catalog/photo-bowl-desktop@2x.webp 2x,
+                      ./img/catalog/photo-bowl-desktop@1x.jpg 1x,
+                      ./img/catalog/photo-bowl-desktop@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/catalog/photo-bowl-tablet@1x.webp,
-                      ./img/webp/catalog/photo-bowl-tablet@2x.webp
+                      ./img/webp/catalog/photo-bowl-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-bowl-tablet@2x.webp 2x,
+                      ./img/catalog/photo-bowl-tablet@1x.jpg 1x,
+                      ./img/catalog/photo-bowl-tablet@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 320px)"
                     srcset="
-                      ./img/webp/catalog/photo-bowl-tablet@1x.webp,
-                      ./img/webp/catalog/photo-bowl-tablet@2x.webp
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1150px)"
-                    srcset="
-                      ./img/catalog/photo-bowl-desktop@1x.jpg,
-                      ./img/catalog/photo-bowl-desktop@2x.jpg
-                    "
-                  />
-                  <source
-                    media="(min-width: 785px)"
-                    srcset="
-                      ./img/catalog/photo-bowl-tablet@1x.jpg,
-                      ./img/catalog/photo-bowl-tablet@2x.jpg
+                      ./img/webp/catalog/photo-bowl-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-bowl-tablet@2x.webp 2x
                     "
                   />
                   <img
                     src="./img/catalog/photo-bowl-mobile@1x.jpg"
-                    srcset="./img/catalog/photo-bowl-mobile@2x.jpg"
+                    srcset="./img/catalog/photo-bowl-mobile@2x.jpg 2x"
                     alt="Фотография корзинки для белья"
                   />
                 </picture>
@@ -222,42 +204,31 @@
                   <source
                     media="(min-width: 1150px)"
                     srcset="
-                      ./img/webp/catalog/photo-toys-desktop@1x.webp,
-                      ./img/webp/catalog/photo-toys-desktop@2x.webp
+                      ./img/webp/catalog/photo-toys-desktop@1x.webp 1x,
+                      ./img/webp/catalog/photo-toys-desktop@2x.webp 2x,
+                      ./img/catalog/photo-toys-desktop@1x.jpg 1x,
+                      ./img/catalog/photo-toys-desktop@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/catalog/photo-toys-tablet@1x.webp,
-                      ./img/webp/catalog/photo-toys-tablet@2x.webp
+                      ./img/webp/catalog/photo-toys-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-toys-tablet@2x.webp 2x,
+                      ./img/catalog/photo-toys-tablet@1x.jpg 1x,
+                      ./img/catalog/photo-toys-tablet@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 320px)"
                     srcset="
-                      ./img/webp/catalog/photo-toys-tablet@1x.webp,
-                      ./img/webp/catalog/photo-toys-tablet@2x.webp
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1150px)"
-                    srcset="
-                      ./img/catalog/photo-toys-desktop@1x.jpg,
-                      ./img/catalog/photo-toys-desktop@2x.jpg
-                    "
-                  />
-                  <source
-                    media="(min-width: 785px)"
-                    srcset="
-                      ./img/catalog/photo-toys-tablet@1x.jpg,
-                      ./img/catalog/photo-toys-tablet@2x.jpg
+                      ./img/webp/catalog/photo-toys-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-toys-tablet@2x.webp 2x
                     "
                   />
                   <img
                     src="./img/catalog/photo-toys-mobile@1x.jpg"
-                    srcset="./img/catalog/photo-toys-mobile@2x.jpg"
+                    srcset="./img/catalog/photo-toys-mobile@2x.jpg 2x"
                     alt="Фотография большой корзинки для игрушек"
                   />
                 </picture>
@@ -298,43 +269,32 @@
               <source
                 media="(min-width: 1150px)"
                 srcset="
-                  ./img/webp/catalog/video-desktop@1x.webp,
-                  ./img/webp/catalog/video-desktop@2x.webp
+                  ./img/webp/catalog/video-desktop@1x.webp 1x,
+                  ./img/webp/catalog/video-desktop@2x.webp 2x,
+                  ./img/catalog/video-desktop@1x.jpg 1x,
+                  ./img/catalog/video-desktop@2x.jpg 2x
                 "
               />
               <source
                 media="(min-width: 785px)"
                 srcset="
-                  ./img/webp/catalog/video-tablet@1x.webp,
-                  ./img/webp/catalog/video-tablet@2x.webp
+                  ./img/webp/catalog/video-tablet@1x.webp 1x,
+                  ./img/webp/catalog/video-tablet@2x.webp 2x,
+                  ./img/catalog/video-tablet@1x.jpg 1x,
+                  ./img/catalog/video-tablet@2x.jpg 2x
                 "
               />
               <source
                 media="(min-width: 320px)"
                 srcset="
-                  ./img/webp/catalog/video-tablet@1x.webp,
-                  ./img/webp/catalog/video-tablet@2x.webp
-                "
-              />
-
-              <source
-                media="(min-width: 1150px)"
-                srcset="
-                  ./img/catalog/video-desktop@1x.jpg,
-                  ./img/catalog/video-desktop@2x.jpg
-                "
-              />
-              <source
-                media="(min-width: 785px)"
-                srcset="
-                  ./img/catalog/video-tablet@1x.jpg,
-                  ./img/catalog/video-tablet@2x.jpg
+                  ./img/webp/catalog/video-tablet@1x.webp 1x,
+                  ./img/webp/catalog/video-tablet@2x.webp 2x
                 "
               />
               <img
                 src="./img/catalog/video-mobile@1x.jpg"
                 alt="Видео процесса производства"
-                srcset="./img/catalog/video-mobile@1x.jpg"
+                srcset="./img/catalog/video-mobile@1x.jpg 2x"
                 loading="lazy"
               />
             </picture>
@@ -355,8 +315,8 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-header__logo" href="./index.html">
-            <svg class="page-footer__logo" width="101.615px" height="34.056px">
+          <a class="page-footer__logo" href="./index.html">
+            <svg class="page-footer__svg" width="101.615px" height="34.056px">
               <use xlink:href="./img/sprite.svg#icon-footer"></use>
             </svg>
           </a>

@@ -7,11 +7,9 @@ var body = document.querySelector(".body__wrapper");
 
 navigation.classList.remove("main-nav--nojs");
 
-if (document.body.clientWidth < 785) {
-  navigation.classList.toggle("main-nav--closed");
+navigation.classList.remove("main-nav--closed");
 
-  navigation.classList.toggle("main-nav--opened");
-}
+navigation.classList.add("main-nav--opened");
 
 buttonMenu.addEventListener("click", function () {
   if (navigation.classList.contains("main-nav--closed")) {

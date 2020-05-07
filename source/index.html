@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
-    <script>document.createElement( "picture" );</script>
-    <script src="./js/vendor/picturefill.min.js" async></script>
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="./js/vendor/picturfill.min.js" async></script>
   </head>
   <body>
     <div class="body__wrapper">
@@ -149,43 +152,32 @@
                   <source
                     media="(min-width: 1150px)"
                     srcset="
-                      ./img/webp/index/triple-set-desktop@1x.webp,
-                      ./img/webp/index/triple-set-desktop@2x.webp
+                      ./img/webp/index/triple-set-desktop@1x.webp 1x,
+                      ./img/webp/index/triple-set-desktop@2x.webp 2x,
+                      ./img/index/triple-set-desktop@1x.jpg 1x,
+                      ./img/index/triple-set-desktop@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/index/triple-set-tablet@1x.webp,
-                      ./img/webp/index/triple-set-tablet@2x.webp
+                      ./img/webp/index/triple-set-tablet@1x.webp 1x,
+                      ./img/webp/index/triple-set-tablet@2x.webp 2x,
+                      ./img/index/triple-set-tablet@1x.jpg 1x,
+                      ./img/index/triple-set-tablet@2x.jpg 2x
                     "
                   />
                   <source
                     media="(min-width: 320px)"
                     srcset="
-                      ./img/webp/index/triple-set-mobile@1x.webp,
-                      ./img/webp/index/triple-set-mobile@2x.webp
-                    "
-                  />
-
-                  <source
-                    media="(min-width: 1150px)"
-                    srcset="
-                      ./img/index/triple-set-desktop@1x.jpg,
-                      ./img/index/triple-set-desktop@2x.jpg
-                    "
-                  />
-                  <source
-                    media="(min-width: 785px)"
-                    srcset="
-                      ./img/index/triple-set-tablet@1x.jpg,
-                      ./img/index/triple-set-tablet@2x.jpg
+                      ./img/webp/index/triple-set-mobile@1x.webp 1x,
+                      ./img/webp/index/triple-set-mobile@2x.webp 2x
                     "
                   />
                   <img
                     class="product-week__image-product"
                     src="./img/index/triple-set-mobile@1x.jpg"
-                    srcset="./img/index/triple-set-mobile@2x.jpg"
+                    srcset="./img/index/triple-set-mobile@2x.jpg 2x"
                     loading="lazy"
                     alt="Фотография корзин"
                   />
@@ -301,9 +293,11 @@
 
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <svg class="page-footer__logo" width="101.615px" height="34.056px">
-            <use xlink:href="./img/sprite.svg#icon-footer"></use>
-          </svg>
+          <a class="page-footer__logo" href="./index.html">
+            <svg class="page-footer__svg" width="101.615px" height="34.056px">
+              <use xlink:href="./img/sprite.svg#icon-footer"></use>
+            </svg>
+          </a>
           <div class="page-footer__social social">
             <ul class="social-list">
               <li class="social-item">

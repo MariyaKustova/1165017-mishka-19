@@ -3,9 +3,9 @@ var navigation=document.querySelector(".main-nav");
 
 navigation.classList.remove("main-nav--nojs");
 
-navigation.classList.toggle("main-nav--closed");
+navigation.classList.remove("main-nav--closed");
 
-navigation.classList.toggle("main-nav--opened");
+navigation.classList.add("main-nav--opened");
 
 buttonMenu.addEventListener("click", function () {
   if (navigation.classList.contains("main-nav--closed")) {
