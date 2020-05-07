@@ -21,7 +21,9 @@
   display: block;
 }
 
-.main-nav--opened ul {
+.main-nav--opened .site-list,
+.main-nav--opened .user-list,
+.main-nav--opened .additional-list {
   display: none;
 }
 
@@ -55,11 +57,24 @@
   .main-nav__toggle {
     display: none;
   }
+
+  .main-nav--opened .user-list {
+    display: flex;
+  }
+
+  .main-nav--opened .site-list {
+    display: flex;
+    position: absolute;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 100%;
+    display: flex;
+  }
+
+  .main-nav--opened .additional-list {
     display: flex;
   }
 }
