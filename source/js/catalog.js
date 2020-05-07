@@ -6,9 +6,9 @@ var body = document.querySelector(".body__wrapper");
 
 navigation.classList.remove("main-nav--nojs");
 
-navigation.classList.toggle("main-nav--closed");
+navigation.classList.remove("main-nav--closed");
 
-navigation.classList.toggle("main-nav--opened");
+navigation.classList.add("main-nav--opened");
 
 document.querySelectorAll(".catalog__button").forEach(function(item)  {
   item.addEventListener("click", function (evt) {
