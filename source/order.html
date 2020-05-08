@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
+    <link rel="preload" href="./fonts/opensans.woff" as="font" />
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" />
+    <link rel="preload" href="./fonts/opensansbold.woff" as="font" />
+    <link rel="preload" href="./fonts/opensansbold.woff2" as="font" />
     <script>
       // Picture element HTML5 shiv
-      document.createElement( "picture" );
+      document.createElement("picture");
     </script>
     <script src="./js/vendor/picturfill.min.js" async></script>
   </head>
   <body>
-    <div class="body__wrapper">
+    <div class="body-wrapper">
       <header class="page-header">
         <a class="page-header__logo" href="./index.html">
           <picture>
@@ -265,7 +269,7 @@
                   required
                 />
                 <svg
-                  class="form-order__svg--phone"
+                  class="form-order__svg form-order__svg--phone"
                   width="24.829px"
                   height="24.333px"
                 >
@@ -281,7 +285,11 @@
                   placeholder="Ваш Email*"
                   required
                 />
-                <svg class="form-order__svg--letter" width="32px" height="32px">
+                <svg
+                  class="form-order__svg form-order__svg--letter"
+                  width="32px"
+                  height="32px"
+                >
                   <use xlink:href="./img/sprite.svg#icon-letter"></use>
                 </svg>
               </label>

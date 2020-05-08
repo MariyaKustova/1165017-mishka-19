@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
     <link href="./css/style.min.css" rel="stylesheet" />
+    <link rel="preload" href="./fonts/opensans.woff" as="font" />
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" />
+    <link rel="preload" href="./fonts/opensansbold.woff" as="font" />
+    <link rel="preload" href="./fonts/opensansbold.woff2" as="font" />
     <script>
       // Picture element HTML5 shiv
-      document.createElement( "picture" );
+      document.createElement("picture");
     </script>
     <script src="./js/vendor/picturfill.min.js" async></script>
   </head>
   <body>
-    <div class="body__wrapper">
+    <div class="body-wrapper">
       <header class="page-header">
         <a class="page-header__logo" href="./index.html">
           <picture>
@@ -90,28 +94,41 @@
               <a class="catalog__description" href="#">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 1150px)"
                     srcset="
                       ./img/webp/catalog/photo-hare-desktop@1x.webp 1x,
-                      ./img/webp/catalog/photo-hare-desktop@2x.webp 2x,
-                      ./img/catalog/photo-hare-desktop@1x.jpg 1x,
-                      ./img/catalog/photo-hare-desktop@2x.jpg 2x
+                      ./img/webp/catalog/photo-hare-desktop@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 785px)"
+                    srcset="
+                      ./img/webp/catalog/photo-hare-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-hare-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 320px)"
+                    srcset="
+                      ./img/webp/catalog/photo-hare-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-hare-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1150px)"
+                    srcset="
+                      ./img/catalog/photo-hare-desktop@1x.jpg       1x,
+                      ./img/catalog/photo-hare-desktop@2x.jpg       2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/catalog/photo-hare-tablet@1x.webp 1x,
-                      ./img/webp/catalog/photo-hare-tablet@2x.webp 2x,
-                      ./img/catalog/photo-hare-tablet@1x.jpg 1x,
-                      ./img/catalog/photo-hare-tablet@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 320px)"
-                    srcset="
-                      ./img/webp/catalog/photo-hare-tablet@1x.webp 1x,
-                      ./img/webp/catalog/photo-hare-tablet@2x.webp 2x
+                      ./img/catalog/photo-hare-tablet@1x.jpg       1x,
+                      ./img/catalog/photo-hare-tablet@2x.jpg       2x
                     "
                   />
                   <img
@@ -131,7 +148,7 @@
                   <button class="catalog__button" type="button">
                     <span>Купить</span>
                     <svg
-                      class="catalog__button--busket"
+                      class="catalog__svg catalog__svg--busket"
                       width="20.294px"
                       height="18.849px"
                     >
@@ -145,28 +162,41 @@
               <a class="catalog__description" href="#">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 1150px)"
                     srcset="
                       ./img/webp/catalog/photo-bowl-desktop@1x.webp 1x,
-                      ./img/webp/catalog/photo-bowl-desktop@2x.webp 2x,
-                      ./img/catalog/photo-bowl-desktop@1x.jpg 1x,
-                      ./img/catalog/photo-bowl-desktop@2x.jpg 2x
+                      ./img/webp/catalog/photo-bowl-desktop@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 785px)"
+                    srcset="
+                      ./img/webp/catalog/photo-bowl-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-bowl-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 320px)"
+                    srcset="
+                      ./img/webp/catalog/photo-bowl-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-bowl-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1150px)"
+                    srcset="
+                      ./img/catalog/photo-bowl-desktop@1x.jpg       1x,
+                      ./img/catalog/photo-bowl-desktop@2x.jpg       2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/catalog/photo-bowl-tablet@1x.webp 1x,
-                      ./img/webp/catalog/photo-bowl-tablet@2x.webp 2x,
-                      ./img/catalog/photo-bowl-tablet@1x.jpg 1x,
-                      ./img/catalog/photo-bowl-tablet@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 320px)"
-                    srcset="
-                      ./img/webp/catalog/photo-bowl-tablet@1x.webp 1x,
-                      ./img/webp/catalog/photo-bowl-tablet@2x.webp 2x
+                      ./img/catalog/photo-bowl-tablet@1x.jpg       1x,
+                      ./img/catalog/photo-bowl-tablet@2x.jpg       2x
                     "
                   />
                   <img
@@ -188,7 +218,7 @@
                   <button class="catalog__button" type="button">
                     <span>Купить</span>
                     <svg
-                      class="catalog__button--busket"
+                      class="catalog__svg catalog__svg--busket"
                       width="20.294px"
                       height="18.849px"
                     >
@@ -202,28 +232,41 @@
               <a class="catalog__description" href="#">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 1150px)"
                     srcset="
                       ./img/webp/catalog/photo-toys-desktop@1x.webp 1x,
-                      ./img/webp/catalog/photo-toys-desktop@2x.webp 2x,
-                      ./img/catalog/photo-toys-desktop@1x.jpg 1x,
-                      ./img/catalog/photo-toys-desktop@2x.jpg 2x
+                      ./img/webp/catalog/photo-toys-desktop@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 785px)"
+                    srcset="
+                      ./img/webp/catalog/photo-toys-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-toys-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 320px)"
+                    srcset="
+                      ./img/webp/catalog/photo-toys-tablet@1x.webp 1x,
+                      ./img/webp/catalog/photo-toys-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1150px)"
+                    srcset="
+                      ./img/catalog/photo-toys-desktop@1x.jpg       1x,
+                      ./img/catalog/photo-toys-desktop@2x.jpg       2x
                     "
                   />
                   <source
                     media="(min-width: 785px)"
                     srcset="
-                      ./img/webp/catalog/photo-toys-tablet@1x.webp 1x,
-                      ./img/webp/catalog/photo-toys-tablet@2x.webp 2x,
-                      ./img/catalog/photo-toys-tablet@1x.jpg 1x,
-                      ./img/catalog/photo-toys-tablet@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 320px)"
-                    srcset="
-                      ./img/webp/catalog/photo-toys-tablet@1x.webp 1x,
-                      ./img/webp/catalog/photo-toys-tablet@2x.webp 2x
+                      ./img/catalog/photo-toys-tablet@1x.jpg       1x,
+                      ./img/catalog/photo-toys-tablet@2x.jpg       2x
                     "
                   />
                   <img
@@ -247,7 +290,7 @@
                   <button class="catalog__button" type="button">
                     <span>Купить</span>
                     <svg
-                      class="catalog__button--busket"
+                      class="catalog__svg catalog__svg--busket"
                       width="20.294px"
                       height="18.849px"
                     >
@@ -267,28 +310,41 @@
           <div class="production-process__video">
             <picture>
               <source
+                type="image/webp"
                 media="(min-width: 1150px)"
                 srcset="
                   ./img/webp/catalog/video-desktop@1x.webp 1x,
-                  ./img/webp/catalog/video-desktop@2x.webp 2x,
-                  ./img/catalog/video-desktop@1x.jpg 1x,
-                  ./img/catalog/video-desktop@2x.jpg 2x
+                  ./img/webp/catalog/video-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 785px)"
+                srcset="
+                  ./img/webp/catalog/video-tablet@1x.webp 1x,
+                  ./img/webp/catalog/video-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 320px)"
+                srcset="
+                  ./img/webp/catalog/video-tablet@1x.webp 1x,
+                  ./img/webp/catalog/video-tablet@2x.webp 2x
+                "
+              />
+              <source
+                media="(min-width: 1150px)"
+                srcset="
+                  ./img/catalog/video-desktop@1x.jpg       1x,
+                  ./img/catalog/video-desktop@2x.jpg       2x
                 "
               />
               <source
                 media="(min-width: 785px)"
                 srcset="
-                  ./img/webp/catalog/video-tablet@1x.webp 1x,
-                  ./img/webp/catalog/video-tablet@2x.webp 2x,
-                  ./img/catalog/video-tablet@1x.jpg 1x,
-                  ./img/catalog/video-tablet@2x.jpg 2x
-                "
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="
-                  ./img/webp/catalog/video-tablet@1x.webp 1x,
-                  ./img/webp/catalog/video-tablet@2x.webp 2x
+                  ./img/catalog/video-tablet@1x.jpg       1x,
+                  ./img/catalog/video-tablet@2x.jpg       2x
                 "
               />
               <img
@@ -298,7 +354,7 @@
                 loading="lazy"
               />
             </picture>
-            <button class="production-process__button--play" type="button">
+            <button class="production-process__button-play" type="button">
               <span class="visually-hidden">Воспроизвести видео</span>
             </button>
           </div>
@@ -359,6 +415,7 @@
         </div>
       </footer>
     </div>
+
     <section class="catalog-popup">
       <h2 class="catalog-popup__title">Добавить в корзину</h2>
       <p class="catalog-popup__text">Выберите размер:</p>

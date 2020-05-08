@@ -3,7 +3,7 @@ var navigation = document.querySelector(".main-nav");
 var buttonOrder = document.querySelector(".product-week__button");
 var buttonAdd = document.querySelector(".catalog-popup__button");
 var popup = document.querySelector(".catalog-popup");
-var body = document.querySelector(".body__wrapper");
+var body = document.querySelector(".body-wrapper");
 
 navigation.classList.remove("main-nav--nojs");
 
@@ -24,11 +24,11 @@ buttonMenu.addEventListener("click", function () {
 buttonOrder.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("catalog-popup--opened");
-  body.classList.add("body__wrapper--opacity");
+  body.classList.add("body-opacity");
 });
 
 buttonAdd.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("catalog-popup--opened");
-  body.classList.remove("body__wrapper--opacity");
+  body.classList.remove("body-opacity");
 });
